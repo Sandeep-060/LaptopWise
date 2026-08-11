@@ -17,6 +17,6 @@ __pycache__/
 Thumbs.db
 
 # Raw datasets
-data/raw/
+data/
 
 LaptopWise_Insights_Notes.ipynb
