@@ -54,16 +54,24 @@ MODEL_PATH = (
 )
 
 # Model Loading
+_MODEL = None
+
 def load_model():
     """
     Load and return the finalized LaptopWise ML pipeline.
+
+    The model is loaded from disk only once and then
+    reused from memory for subsequent predictions.
     """
+    global _MODEL
 
-    if not MODEL_PATH.exists():
-        raise FileNotFoundError(f"Model artifact not found: {MODEL_PATH}")
+    if _MODEL is None:
+        if not MODEL_PATH.exists():
+            raise FileNotFoundError(f"Model artifact not found: {MODEL_PATH}")
 
-    return joblib.load(MODEL_PATH)
+        _MODEL = joblib.load(MODEL_PATH)
 
+    return _MODEL
 
 # Input Validation
 def validate_input(data):
