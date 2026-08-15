@@ -1,6 +1,6 @@
 import streamlit as st
-from app.options import load_category_options
-from app.api_client import APIClientError, predict_price, compare_deal
+from options import load_category_options
+from api_client import APIClientError, predict_price, compare_deal
 
 
 # Page Configuration
