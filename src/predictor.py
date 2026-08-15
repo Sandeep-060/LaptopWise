@@ -117,6 +117,16 @@ def validate_input(data):
 
         if not math.isfinite(value):
             raise ValueError(f"Numeric value for '{feature}' must be finite.")
+        if feature in (
+            "Thickness",
+            "Weight",
+            "Display Size",
+            "RAM_Capacity_GB",
+            "Battery Capacity",
+        ) and value <= 0:
+            raise ValueError(
+                f"'{feature}' must be greater than zero."
+            )
 
     for feature in CATEGORICAL_FEATURES:
         value = data[feature]
