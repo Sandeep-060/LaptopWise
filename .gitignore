@@ -17,6 +17,10 @@ __pycache__/
 Thumbs.db
 
 # Raw datasets
-data/
+data/raw/
+
+# Ignore other processed data files
+data/processed/*
+!data/processed/laptop_selected.csv
 
 LaptopWise_Insights_Notes.ipynb
