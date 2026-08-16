@@ -7,7 +7,7 @@ LaptopWise is an end-to-end machine learning application that estimates the mark
 ## Live Demo
 
 - **Streamlit App:** https://laptopwise.streamlit.app/
-- **FastAPI:** https://laptopwise.onrender.com/
+- **FastAPI:** https://laptopwise.onrender.com/docs
 - **GitHub:** https://github.com/Sandeep-060/LaptopWise
 
 ## Features
